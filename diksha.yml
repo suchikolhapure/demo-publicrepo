@@ -1,0 +1,22 @@
+---
+- name: suchita
+  hosts: all
+  vars:
+   a: "welcome"
+   b: "hello everyone"
+  tasks:
+   - name: task-1
+     vars:
+      a: "this is diksha"
+     debug:
+       msg: "{{a}}"
+
+   - name: task-2
+     vars:
+      b: "welcome to cloudeblitz"
+     debug:
+       msg: "{{b}}"
+
+
+...
+
