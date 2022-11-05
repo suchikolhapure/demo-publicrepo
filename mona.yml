@@ -1,0 +1,18 @@
+---
+ - name : diksha-playbook
+   hosts : all  
+   vars :
+    a: "this msg form global a"
+    b: "this msg form global b"
+   tasks:
+    - name: task-1 
+      vars: 
+       a: "this msg from local diksha a"
+      debug:
+       msg : "{{a}}"
+    - name: task-2    
+      vars: 
+       b : "this msg from local b"
+      debug: 
+        msg: "{{b}}"
+...
